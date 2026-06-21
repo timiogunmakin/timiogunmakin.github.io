@@ -198,8 +198,9 @@
         const saved = localStorage.getItem('theme');
         if (saved === 'auto') {
             setTheme('auto');
-    }
-});
+        }
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    });
 
   // Enable click on the moon icon
     document.querySelector('.js-set-theme-auto')?.addEventListener('click', (e) => {
