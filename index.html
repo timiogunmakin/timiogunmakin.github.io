@@ -31,7 +31,7 @@
                 <a href="#education">Education</a>
             </li>
             <li>
-                <a href="https://github.com/timiogunmakin">Github</a>
+                <a href="https://github.com/timiogunmakin" target="_blank" class="no-scroll">Github</a>
             </li>
             <li>
                 <a href="#skills">Skills</a>
@@ -196,7 +196,7 @@
   // Apply saved theme (if it's set to auto) on page load
     window.addEventListener('DOMContentLoaded', () => {
         const saved = localStorage.getItem('theme');
-        if (saved === 'auto') {
+        if (!saved || saved === 'auto') {
             setTheme('auto');
         }
         document.getElementById('current-year').textContent = new Date().getFullYear();
