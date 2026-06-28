@@ -194,13 +194,22 @@
 
     <main class="gallery-wrap">
         <!--
-            HOW TO ADD PHOTOS
-            ─────────────────
-            1. Put your image file in the images/ folder (or link to an external URL).
-            2. Replace the <div class="photo-ph r-*"> with:
-                   <img src="images/your-photo.jpg" alt="Description" loading="lazy">
-            3. Add data-src="images/your-photo.jpg" to the parent <figure> tag.
-            4. Update the data-caption attribute with a title/location.
+            HOW TO ADD PHOTOS (Cloudinary)
+            ──────────────────────────────
+            1. Upload your photo to Cloudinary (cloud name: dutkmvhub).
+               Dashboard → Media Library → Upload.
+
+            2. Your image URL will be:
+               https://res.cloudinary.com/dutkmvhub/image/upload/q_auto,f_auto/PUBLIC_ID
+               (q_auto,f_auto = auto quality + WebP/AVIF — always include these)
+
+            3. Replace <div class="photo-ph r-*"></div> with:
+               <img src="https://res.cloudinary.com/dutkmvhub/image/upload/q_auto,f_auto/PUBLIC_ID"
+                    alt="Description" loading="lazy">
+
+            4. Add these attributes to the parent <figure>:
+               data-src="https://res.cloudinary.com/dutkmvhub/image/upload/q_auto,f_auto/PUBLIC_ID"
+               data-caption="Your caption here"
 
             The lightbox opens automatically for any <figure> with a data-src attribute.
         -->
